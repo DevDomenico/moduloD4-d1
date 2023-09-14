@@ -117,6 +117,20 @@ console.log(angoli(45));  // "acuto"
 
 // 8. Crea una funzione che crei un acronimo a partire da una frase. Es. “Fabbrica Italiana Automobili Torino” deve ritornare “FIAT”.
 
-//da vedere....
+function creaAcronimo(frase) {
+  const parole = frase.split(' ');  // Dividi la frase in parole
+  let acronimo = '';
+  
+  for (const parola of parole) {
+      acronimo += parola[0].toUpperCase();  // Aggiungi la prima lettera di ogni parola in maiuscolo all'acronimo
+  }
+  
+  return acronimo;
+}
+
+//utilizzo:
+const frase = "Fabbrica Italiana Automobili Torino";
+const acronimo = creaAcronimo(frase);
+console.log(acronimo);  // Output: "FIAT"
 
 
